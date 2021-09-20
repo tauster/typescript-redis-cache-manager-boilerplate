@@ -1,0 +1,30 @@
+{
+  "name": "@cache_manager/lib_common_utilities",
+  "version": "1.1.0",
+  "description": "Shared library for common utilities used across the stack",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "",
+  "author": "Tausif Sharif",
+  "license": "MIT",
+  "scripts": {
+    "remove-dist": "rm -r -f ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/crypto-js": "^4.0.1",
+    "@types/debug": "^4.1.5",
+    "@types/lodash": "^4.14.149",
+    "@types/moment-timezone": "^0.5.13",
+    "@types/semver": "^7.1.0",
+    "@types/ua-parser-js": "^0.7.33",
+    "@types/uuid": "^7.0.0",
+    "crypto-js": "^4.0.0",
+    "debug": "^4.1.1",
+    "lodash": "^4.17.15",
+    "moment-timezone": "^0.5.31",
+    "semver": "^7.1.3",
+    "ua-parser-js": "^0.7.21",
+    "uuid": "^7.0.1"
+  }
+}

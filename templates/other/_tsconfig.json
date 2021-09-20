@@ -1,0 +1,10 @@
+{
+  "include": [
+    "./src/*", "./src/libs/*",
+    "../../packages/lib_to_import/src/libs/*", "../../packages/lib_to_import/src/types/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "../../tsconfig.json"
+}

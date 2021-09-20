@@ -1,0 +1,26 @@
+{
+  "name": "@cache_manager/lib_database",
+  "version": "1.1.0",
+  "description": "Shared library for cache_manager database",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "",
+  "author": "Tausif Sharif",
+  "license": "MIT",
+  "scripts": {
+    "remove-dist": "rm -r -f ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/axios": "^0.14.0",
+    "@types/pg": "^7.14.3",
+    "aws-sdk": "^2.621.0",
+    "axios": "^0.19.2",
+    "pg": "^8.1.0"
+  },
+  "optionalDependencies": {
+    "@cache_manager/lib_api": "^1.0.1",
+    "@cache_manager/lib_common_utilities": "^1.0.1"
+  }
+}

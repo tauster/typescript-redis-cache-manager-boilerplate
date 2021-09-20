@@ -1,0 +1,13 @@
+{
+  "include": [
+    "./src",
+    "../packages/lib_api/src",
+    "../packages/lib_cache/src",
+    "../packages/lib_common_utilities/src",
+    "../packages/lib_database/src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "../../tsconfig.json"
+}

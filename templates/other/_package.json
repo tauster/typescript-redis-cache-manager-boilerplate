@@ -1,0 +1,29 @@
+{
+  "name": "@cache_manager/other_core_name",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "",
+  "author": "Tausif Sharif",
+  "license": "MIT",
+  "scripts": {
+    "build:development": "NODE_ENV=development npx webpack && npm run zip-dist",
+    "build:development-watch": "NODE_ENV=development npx webpack --watch",
+    "build:staging": "NODE_ENV=staging npx webpack && npm run zip-dist",
+    "build:production": "NODE_ENV=production npx webpack && npm run zip-dist",
+    "remove-dist": "rm -r -f ./dist",
+    "remove-node_modules": "rm -r -f ./dist",
+    "zip-dist": "zip -r -j dist/index.zip dist/"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cache_manager/lib_being_imported": "^20.0.1",
+    "@types/node": "^13.7.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "ts-loader": "^6.2.1",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}

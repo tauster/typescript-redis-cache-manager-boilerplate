@@ -1,0 +1,59 @@
+{
+  "name": "cache_manager",
+  "version": "1.1.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "",
+  "author": "Tausif Sharif",
+  "license": "MIT",
+  "scripts": {
+    "build:development_local": "NODE_ENV=development_local npx webpack",
+    "build:development_local-watch": "NODE_ENV=development_local npx webpack --watch",
+    "build:development": "NODE_ENV=development npx webpack && npm run zip-dist",
+    "build:staging": "NODE_ENV=staging npx webpack && npm run zip-dist",
+    "build:production_local": "NODE_ENV=production_local npx webpack && npm run zip-dist",
+    "build:production_local-debug": "NODE_ENV=production_local FORCE_DEBUG_LOG=true npx webpack && npm run zip-dist",
+    "build:production": "NODE_ENV=production npx webpack && npm run zip-dist",
+    "server:local": "nodemon dist/index.js",
+    "server-cache:local-persist": "redis-server --daemonize yes",
+    "server-cache:local-shutdown": "redis-cli shutdown",
+    "server-cache:view-instances": "ps -u tsharif -o pid,rss,command | grep redis",
+    "server:production_local": "nodemon dist/index.js",
+    "deploy:development": "aws s3 sync dist/ s3://cache_manager-cache-manager-development --exact-timestamps",
+    "deploy:production": "aws s3 sync dist/ s3://cache_manager-cache-manager-production --exact-timestamps",
+    "remove-dist": "rm -r -f ./dist",
+    "remove-node_modules": "rm -r -f ./node_modules",
+    "zip-dist": "zip -r -j dist/index.zip dist/"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "@types/redis": "^2.8.28",
+    "node-fetch": "^2.6.0",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/axios": "^0.14.0",
+    "@types/body-parser": "^1.19.0",
+    "@types/node": "^13.7.1",
+    "@types/pg": "^7.14.3",
+    "aws-sdk": "^2.637.0",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cookie-parser": "^1.4.5",
+    "copy-webpack-plugin": "^5.1.1",
+    "pg": "^8.1.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "optionalDependencies": {
+    "@cache_manager/lib_api": "^1.0.1",
+    "@cache_manager/lib_cache": "^1.0.1",
+    "@cache_manager/lib_common_utilities": "^1.0.1",
+    "@cache_manager/lib_database": "^1.0.1"
+  }
+}

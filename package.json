@@ -1,0 +1,28 @@
+{
+  "name": "typescript-monorepo",
+  "workspaces": [
+    "packages/*",
+    "api/*",
+    "database/*",
+    "frontend/*"
+  ],
+  "description": "Typescript monorepo",
+  "repository": "",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build-all-core:development": "npx lerna run build:development",
+    "build-all-core:staging": "npx lerna run build:staging",
+    "build-all-core:production": "npx lerna run build:production",
+    "environment-install": "npm install && npx lerna bootstrap",
+    "environment-update": "npx lerna bootstrap",
+    "environment-uninstall": "npx lerna clean && npm run remove-node_modules && npm run remove-dist",
+    "remove-node_modules": "rm -r -f ./node_modules",
+    "remove-dist": "rm -r -f ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "lerna": "^3.14.1",
+    "typescript": "^3.4.5"
+  }
+}

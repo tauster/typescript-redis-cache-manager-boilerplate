@@ -1,0 +1,27 @@
+{
+  "name": "@cache_manager/lib_cache",
+  "version": "1.1.0",
+  "description": "Shared library for cache_manager Cache Server",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "",
+  "author": "Tausif Sharif",
+  "license": "MIT",
+  "scripts": {
+    "remove-dist": "rm -r -f ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/axios": "^0.14.0",
+    "@types/node-fetch": "^2.5.7",
+    "@types/pg": "^7.14.3",
+    "@types/redis": "^2.8.28",
+    "aws-sdk": "^2.621.0",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "node-fetch": "^2.6.0",
+    "pg": "^8.1.0",
+    "redis": "^3.0.2"
+  }
+}

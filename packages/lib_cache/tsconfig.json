@@ -1,0 +1,11 @@
+{
+  "include": [
+    "./src",
+    "../../packages/lib_common_utilities/src",
+    "../../packages/lib_database/src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "../../tsconfig.json"
+}

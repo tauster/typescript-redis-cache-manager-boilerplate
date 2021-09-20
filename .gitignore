@@ -1,0 +1,58 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+node_modules/
+
+# testing
+/coverage
+
+# production
+/build
+build/
+/dist
+dist/
+
+# compiled js files
+*.js
+*.js.map
+*.d.ts
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# API Keys
+.env
+
+# Log Files
+*.log
+log_*.txt
+
+# Info Files
+*.tsbuildinfo
+
+# Allow Webpack JS files
+!webpack.config.js
+!base.js
+!development_local.js
+!development.js
+!staging.js
+!production_local.js
+!production.js
+
+# Allow AWS API Gateway WebSocket Prerequisites
+!patch.js
+
+# Front end assets
+!bootstrap*.js
+!bootstrap*.js.map
+!font-awesome*.js
+!jquery*.js

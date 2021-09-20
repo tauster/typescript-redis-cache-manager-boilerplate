@@ -1,0 +1,18 @@
+{
+  "name": "@cache_manager/lib_package_name",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "",
+  "author": "Tausif Sharif",
+  "license": "MIT",
+  "scripts": {
+    "remove-dist": "rm -r -f ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {
+    "@cache_manager/lib_being_imported": "^1.0.1"
+  }
+}
